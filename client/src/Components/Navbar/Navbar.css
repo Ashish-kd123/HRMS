@@ -1,0 +1,149 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+
+
+.logo-box {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 130px;
+  height: 40px;
+}
+
+.search-box {
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  width: 200px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-item.active {
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+.nav-item .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.logout {
+  color: #000;
+}
+
+.logout:hover {
+  background-color: #f5f5f5;
+}
+
+
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1101;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #4a0072;
+  border-radius: 2px;
+}
+@media (max-width: 1024px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    background-color: #fff;
+    height: 100vh;
+    z-index: 1100;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .logo {
+    width: 110px;
+    height: auto;
+  }
+
+  .search-box input {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+

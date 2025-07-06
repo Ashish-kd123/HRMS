@@ -1,0 +1,302 @@
+
+
+.candidates-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 260px;
+  min-height: 100vh;
+  
+}
+
+@media (max-width: 1024px) {
+  .candidates-container {
+    padding-left: 0;
+  }
+}
+
+.candidate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding:1rem 1.5rem;
+  border-radius: 12px;
+}
+
+.left-controls,
+.right-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.left-controls select,
+.right-controls input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 60px;
+  background-color: #fff;
+  outline: none;
+}
+
+.right-controls input {
+  width: 200px;
+}
+
+.right-controls button {
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #4b007d;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.right-controls button:hover {
+  background-color: #9e6ec6;
+}
+
+
+.table-container {
+  flex-grow: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: 0 1.5rem 1.5rem;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.candidates-table thead {
+  background-color: #4b007d;
+  color: #ffffff;
+}
+
+.candidates-table thead th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.candidates-table thead th:last-child {
+  border-top-right-radius: 20px;
+}
+
+.candidates-table th,
+.candidates-table td {
+  padding: 16px 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.status-dropdown {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.action-wrapper {
+  position: relative;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: -170px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu div {
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-menu div:hover {
+  background-color: #f0f0f0;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  width: 1100px;
+  max-width: 95%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+  background-color: #4B0082;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+}
+
+.modal-form input {
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #800080;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.modal-form input[type="file"] {
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+
+.modal-form button {
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  padding: 12px;
+  background-color: #4b007d;
+  color: white;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.modal-form button:hover {
+  background-color: #8738bc;
+}
+
+.declaration-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.declaration {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+  white-space: nowrap;
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal-form input {
+    width: 100%;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .modal-form {
+    padding: 20px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .candidates-container {
+    padding-left: 0;
+  }
+
+  .candidate {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .right-controls input,
+  .right-controls button,
+  .left-controls select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-form button {
+    width: 100%;
+  }
+
+  .declaration-wrapper {
+    justify-content: center;
+  }
+
+  .declaration {
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .candidates-table th,
+  .candidates-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,145 @@
+
+.attendance-container {
+  padding-left: 260px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  transition: padding-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .attendance-container {
+    padding-left: 0;
+  }
+}
+
+
+.attendance-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left-controls,
+.right-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.left-controls select,
+.right-controls input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 60px;
+  background-color: #fff;
+  outline: none;
+}
+
+.right-controls input {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
+  .attendance-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-controls,
+  .right-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .right-controls input,
+  .left-controls select {
+    width: 100%;
+  }
+}
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  min-width: 700px;
+}
+
+.attendance-table thead {
+  background-color: #4b007d;
+  color: #ffffff;
+}
+
+.attendance-table th,
+.attendance-table td {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.attendance-table th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.attendance-table th:last-child {
+  border-top-right-radius: 20px;
+}
+
+.attendance-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.attendance-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .attendance-table th,
+  .attendance-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .attendance-table thead {
+    font-size: 14px;
+  }
+}
+
+.status-dropdown {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+
+.action-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #333;
+}
+
+.action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

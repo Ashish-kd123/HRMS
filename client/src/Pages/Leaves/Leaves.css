@@ -1,0 +1,398 @@
+
+.leaves-container {
+  padding-left: 290px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  transition: padding-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .leaves-container {
+    padding-left: 0;
+  }
+}
+
+.leaves-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.left-controls select {
+  padding: 10px 54px;
+  font-size: 14px;
+  border-radius: 60px;
+  outline: none;
+  cursor: pointer;
+}
+
+.right-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.right-controls input[type="text"] {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 60px;
+  border: 1px solid #ccc;
+  width: 200px;
+  outline: none;
+}
+
+.right-controls button {
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 60px;
+  background-color: #620c97;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.right-controls button:hover {
+  background-color: #8c3bb5;
+}
+
+@media (max-width: 600px) {
+  .leaves-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .right-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .right-controls input[type="text"],
+  .right-controls button,
+  .left-controls select {
+    width: 100%;
+  }
+}
+
+.leaves-main {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.leave-table {
+  flex: 2;
+  min-width: 400px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.leave-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.leave-data-table thead {
+  background-color: #4a0072;
+  color: #ffffff;
+}
+
+.leave-data-table th,
+.leave-data-table td {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.applied-title-row {
+  background-color: #4a0072;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding: 16px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.leave-data-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.leave-data-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.status-dropdown {
+  padding: 8px 12px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+
+.doc-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.doc-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.leave-calendar {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calendar-title {
+  background-color: #4a0072;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 30px;
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.react-calendar__navigation button {
+  color: #4a0072;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  color: #4a0072;
+}
+
+.react-calendar__tile {
+  padding: 10px 6px;
+  background: none;
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid #eee;
+  cursor: pointer;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #f1e6f8;
+}
+
+.react-calendar__tile--active {
+  background: #4a0072;
+  color: white;
+  border-radius: 10px;
+}
+
+.react-calendar__tile--now {
+  background: #eee7f5;
+  color: #4a0072;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .leaves-main {
+    flex-direction: column;
+  }
+
+  .leave-table,
+  .leave-calendar {
+    width: 100%;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: #fff;
+  width: 700px;
+  max-width: 95%;
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-header {
+  background-color: #4B0082;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.status-dropdown {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+
+  cursor: pointer;
+  outline: none;
+ 
+}
+
+
+
+.status-dropdown option {
+  padding: 10px;
+}
+
+.close-btn:focus,
+.close-btn:hover,
+.close-btn:active {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 40px;
+}
+
+.modal-body input,
+.modal-body select {
+  width: 46%;
+  padding: 12px;
+  border: 1px solid #800080;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.modal-body input[type="file"] {
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px 30px;
+  width: 100%;
+}
+
+.modal-footer button {
+  width: 220px;
+  padding: 14px 20px;
+  background-color: #4b007d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 6px 12px rgba(75, 0, 125, 0.2);
+  transition: all 0.3s ease;
+}
+
+.modal-footer button:hover {
+  background-color: #8738bc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(135, 56, 188, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .modal-body input,
+  .modal-body select {
+    width: 100%;
+  }
+
+  .modal-body {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-footer button {
+    width: 100%;
+  }
+}
